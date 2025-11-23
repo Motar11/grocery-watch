@@ -5,7 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.CompareArrows
+import androidx.compose.material.icons.filled.Compare
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -48,7 +48,7 @@ class MainActivity : ComponentActivity() {
                             title = { Text("Grocery Watch") },
                             actions = {
                                 IconButton(onClick = { navController.navigate(Screen.Compare.route) }) {
-                                    Icon(Icons.Default.CompareArrows, contentDescription = "Compare")
+                                    Icon(Icons.Default.Compare, contentDescription = "Compare")
                                 }
                             }
                         )
