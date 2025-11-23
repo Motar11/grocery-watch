@@ -24,7 +24,8 @@ Grocery Watch is an Android app built with Kotlin, Jetpack Compose, Room, and Hi
 2. Install SDK Platform 34 (Android 14), Android SDK Build-Tools 34.x, and the Google Play/Google APIs emulator image via **Tools > SDK Manager**.
 3. Create an Android Virtual Device (AVD) with at least 2 GB RAM in **Tools > Device Manager**. If nested virtualization is unavailable, choose the ARM image and disable hardware acceleration; performance will be slower but works in most VMs.
 4. Press **Sync Project with Gradle Files**. If the Gradle wrapper JAR is missing, regenerate it with `gradle wrapper --gradle-version 8.6`.
-5. Run **Run > Run 'app'** to launch the emulator, or from the terminal run `./gradlew installDebug` then start the AVD via Device Manager.
+5. Select the bundled **Grocery Watch** run configuration (or choose **Run > Run 'Grocery Watch'**) so Android Studio knows to use the `app` module. If Studio still shows "module not specified", re-import the project from the `build.gradle.kts` in the root and pick the **Grocery Watch** run configuration again.
+6. To launch from the command line, run `./gradlew installDebug` then start the AVD via Device Manager.
 
 ### Command line (no emulator)
 From the project root, build an APK with:
