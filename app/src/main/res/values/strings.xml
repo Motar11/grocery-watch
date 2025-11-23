@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Grocery Watch</string>
+    <string name="add_grocery_hint">Add a grocery item</string>
+    <string name="add_button">Add</string>
 </resources>
