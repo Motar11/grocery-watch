@@ -1,0 +1,15 @@
+<component name="ProjectRunConfigurationManager">
+    <configuration default="false" name="Grocery Watch" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+        <module name="app" />
+        <option name="DEPLOY" value="true" />
+        <option name="MODE" value="default_activity" />
+        <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+        <option name="USE_LAST_SELECTED_DEVICE" value="true" />
+        <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+        <option name="DEPLOY_AS_INSTANT" value="false" />
+        <option name="CLEAR_APP_STORAGE" value="false" />
+        <method v="2">
+            <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+        </method>
+    </configuration>
+</component>

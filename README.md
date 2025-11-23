@@ -19,9 +19,20 @@ Grocery Watch is an Android app built with Kotlin, Jetpack Compose, Room, and Hi
 - MPAndroidChart embedded in Compose for charts
 
 ## Running the app
-1. Open the project in Android Studio Hedgehog or newer.
-2. Ensure the Gradle wrapper jar is available. If it is missing, regenerate it with `gradle wrapper --gradle-version 8.6`.
-3. Use **Run > Run 'app'** or execute `./gradlew assembleDebug` from the project root.
+### Android Studio on a VM (emulator)
+1. Install Android Studio Hedgehog or newer inside the VM and open the project folder.
+2. Install SDK Platform 34 (Android 14), Android SDK Build-Tools 34.x, and the Google Play/Google APIs emulator image via **Tools > SDK Manager**.
+3. Create an Android Virtual Device (AVD) with at least 2 GB RAM in **Tools > Device Manager**. If nested virtualization is unavailable, choose the ARM image and disable hardware acceleration; performance will be slower but works in most VMs.
+4. Press **Sync Project with Gradle Files**. If the Gradle wrapper JAR is missing, regenerate it with `gradle wrapper --gradle-version 8.6`.
+5. Select the bundled **Grocery Watch** run configuration (or choose **Run > Run 'Grocery Watch'**) so Android Studio knows to use the `app` module. If Studio still shows "module not specified", re-import the project from the `build.gradle.kts` in the root and pick the **Grocery Watch** run configuration again.
+6. To launch from the command line, run `./gradlew installDebug` then start the AVD via Device Manager.
+
+### Command line (no emulator)
+From the project root, build an APK with:
+```bash
+./gradlew assembleDebug
+```
+This produces `app/build/outputs/apk/debug/app-debug.apk` for sideloading on a device or emulator.
 
 ## Project structure
 - `app/src/main/java/com/example/grocerywatch` – application code (DI modules, repository, view model, Compose screens)
